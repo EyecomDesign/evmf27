@@ -19,6 +19,7 @@ function initSideNavWipeEffect() {
   const menu = navWrap.querySelector('[data-sidenav-menu]');
   const menuToggles = document.querySelectorAll('[data-sidenav-toggle]');
   const menuLinks = navWrap.querySelectorAll('[data-sidenav-link]');
+  const menuLinksAnchor = navWrap.querySelectorAll('[data-sidenav-link-anchor]');
   const fadeTargets = navWrap.querySelectorAll('[data-sidenav-fade]');
   const menuButton = document.querySelector('[data-sidenav-button]');
   if (!menuButton) return;
@@ -74,7 +75,7 @@ function initSideNavWipeEffect() {
   });
 
   // Always close the menu when any link inside it is clicked
-  menuLinks.forEach((link) => {
+  menuLinksAnchor.forEach((link) => {
     link.addEventListener('click', () => {
       if (navWrap.getAttribute('data-nav-state') === 'open') {
         closeNav();
