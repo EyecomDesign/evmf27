@@ -49,7 +49,7 @@ function initSideNavWipeEffect() {
         '<+=0.05'
       );
   };
-
+  //EyecomDesign.github.io/evmf27/index.js
   const closeNav = () => {
     navWrap.setAttribute('data-nav-state', 'closed');
 
