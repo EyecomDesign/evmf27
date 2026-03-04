@@ -73,6 +73,15 @@ function initSideNavWipeEffect() {
     // comment
   });
 
+  // Always close the menu when any link inside it is clicked
+  menuLinks.forEach((link) => {
+    link.addEventListener('click', () => {
+      if (navWrap.getAttribute('data-nav-state') === 'open') {
+        closeNav();
+      }
+    });
+  });
+
   // If menu is open, you can close it using the "escape" key
   document.addEventListener('keydown', (e) => {
     if (e.key === 'Escape' && navWrap.getAttribute('data-nav-state') === 'open') {
