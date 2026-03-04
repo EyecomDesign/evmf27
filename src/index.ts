@@ -70,6 +70,7 @@ function initSideNavWipeEffect() {
         openNav();
       }
     });
+    // comment
   });
 
   // If menu is open, you can close it using the "escape" key
